@@ -1,0 +1,28 @@
+{
+  "name": "ljcgrowup/omr",
+  "description": "An image marking detector using optical mark recognition",
+  "type": "library",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Rafael Fernandes",
+      "email": "rafael.ljcgrowup@gmail.com"
+    },
+    {
+      "name": "inforocha",
+      "homepage": "https://github.com/inforocha/OMR_leitura_gabarito"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-imagick": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "LJCGrowup\\OMR\\": "src/"
+    },
+    "files": [
+      "src/Core/helpers/helpers.php"
+    ]
+  }
+}
