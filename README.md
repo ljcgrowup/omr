@@ -1,4 +1,4 @@
-# Este pacote foi criado por base: https://github.com/inforocha/OMR_leitura_gabarito/blob/master/file_reader_omr.php e https://github.com/henricavalcante/openomr
+# Este pacote foi criado a partir dos repositórios: https://github.com/inforocha/OMR_leitura_gabarito/blob/master/file_reader_omr.php e https://github.com/henricavalcante/openomr
 
 
 Pacote PHP para leitura de marcações em documentos(imagens).

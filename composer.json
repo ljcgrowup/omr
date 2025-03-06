@@ -2,7 +2,7 @@
   "name": "ljcgrowup/omr",
   "description": "An image marking detector using optical mark recognition",
   "type": "library",
-  "license": "GNU",
+  "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Rafael Fernandes",
