@@ -11,7 +11,6 @@ use JansenFelipe\OMR\Point;
 
 class ImagickScanner extends Scanner
 {
-
     private $original;
     private $imagick;
     private $draw;
