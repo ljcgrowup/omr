@@ -30,8 +30,7 @@ class ImagickScanner extends Scanner
      */
     private function getImagick()
     {
-        if(is_null($this->imagick))
-        {
+        if (is_null($this->imagick)) {
             $this->original = new Imagick($this->imagePath);
 
             $this->imagick = new Imagick($this->imagePath);
@@ -73,14 +72,11 @@ class ImagickScanner extends Scanner
         $this->draw->setStrokeColor(new ImagickPixel("#00CC00"));
         $this->draw->rectangle($first->getX(), $first->getY(), $last->getX(), $last->getY());
 
-        for($y = $first->getY(); $y != $last->getY(); $y++)
-        {
-            for($x = $first->getX(); $x != $last->getX(); $x++)
-            {
+        for ($y = $first->getY(); $y != $last->getY(); $y++) {
+            for ($x = $first->getX(); $x != $last->getX(); $x++) {
                 $color = $imagick->getImagePixelColor($x, $y)->getColor();
 
-                if ($color['r'] <= 5 && $color['g'] <= 5 && $color['b'] <= 5)
-                {
+                if ($color['r'] <= 5 && $color['g'] <= 5 && $color['b'] <= 5) {
                     if ($x >= $point->getX()) {
                         $point->setX($x);
                     }
@@ -106,7 +102,7 @@ class ImagickScanner extends Scanner
     protected function bottomLeft(Point $near)
     {
         $imagick = $this->getImagick();
-        
+
         $x = $near->getX() - 20;
         $y = $near->getY() - 20;
 
@@ -125,18 +121,15 @@ class ImagickScanner extends Scanner
         $this->draw->setStrokeColor(new ImagickPixel("#00CC00"));
         $this->draw->rectangle($first->getX(), $first->getY(), $last->getX(), $last->getY());
 
-        for($y = $first->getY(); $y != $last->getY(); $y++)
-        {
-            for($x = $first->getX(); $x != $last->getX(); $x++)
-            {
+        for ($y = $first->getY(); $y != $last->getY(); $y++) {
+            for ($x = $first->getX(); $x != $last->getX(); $x++) {
                 $color = $imagick->getImagePixelColor($x, $y)->getColor();
 
-                if ($color['r'] <= 5 && $color['g'] <= 5 && $color['b'] <= 5)
-                {
+                if ($color['r'] <= 5 && $color['g'] <= 5 && $color['b'] <= 5) {
                     if ($x <= $point->getX()) {
                         $point->setX($x);
                     }
-                        
+
                     if ($y >= $point->getY()) {
                         $point->setY($y);
                     }
@@ -174,7 +167,7 @@ class ImagickScanner extends Scanner
      */
     protected function ajustRotate($degrees)
     {
-        if($degrees<0) {
+        if ($degrees < 0) {
             $degrees = 360 + $degrees;
         }
 
@@ -232,7 +225,7 @@ class ImagickScanner extends Scanner
         //Add draw debug
         $this->draw->setStrokeOpacity(1);
         $this->draw->setStrokeWidth(2);
-        $this->draw->setStrokeColor(new ImagickPixel($area->percentBlack() >= $tolerance ? "#0000CC":"#CC0000"));
+        $this->draw->setStrokeColor(new ImagickPixel($area->percentBlack() >= $tolerance ? "#0000CC" : "#CC0000"));
         $this->draw->rectangle($a->getX(), $a->getY(), $b->getX(), $b->getY());
 
         return $area;
