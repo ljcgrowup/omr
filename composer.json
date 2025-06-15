@@ -15,13 +15,13 @@
     "survey"
   ],
   "require": {
-    "php": "7.*",
+    "php": "8.*",
     "ext-imagick": "*",
-    "symfony/console": "2.7.*"
+    "symfony/console": "7.3.*"
   },
   "bin": ["bin/omr"],
   "require-dev": {
-    "phpunit/phpunit": "8.*"
+    "phpunit/phpunit": "9.*"
   },
   "autoload": {
     "psr-4": {
